@@ -1,0 +1,36 @@
+{% extends 'enigma/template.html' %}
+{% load static %}
+
+{% block extra_includes %}
+    <style>
+        .footer {
+            display: none;
+        }
+        nav {
+            display: none;
+        }
+        body {
+            background: #f5f5f5;
+        }
+        .content {
+            padding: 0;
+            margin: 0;
+            height: calc(100% - 73px);
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="error-page">
+        <div class="banner">
+            <img src="{% static 'enigma/img/logo.svg' %}" alt="">
+        </div>
+        <div class="wrapper">
+            <img src="{% static 'enigma/img/robot.svg' %}" alt="">
+            <h1>Oeps, Error 500</h1>
+            <h3>Er is onverwachts iets fout gegaan.</h3>
+            <p>Er is een melding gemaakt bij onze ontwikkelaars en we zullen zo snel mogelijk aan de slag gaan om dit probleem te verhelpen!</p>
+            <a href="{% url 'topdesk:home' %}"><button>Terug naar home</button></a>
+        </div>
+    </div>
+{% endblock %}
