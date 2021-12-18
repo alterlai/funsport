@@ -35,6 +35,9 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'apps.profiles',
+    'apps.public',
+    'apps.gallery',
+    'funsport',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -126,5 +129,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 STATIC_DIR = os.path.join(BASE_DIR, 'static/')
+MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
+AVATAR_MEDIA_ROOT = os.path.join(MEDIA_ROOT, 'avatars')
+MEDIA_URL = '/media/'
+
+LOGIN_URL = '/login/'
+
+AUTH_USER_MODEL = 'profiles.User'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

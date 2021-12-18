@@ -1,0 +1,22 @@
+*Features website:*
+_Publiek gedeelte:_
+- (M) Paar simpele pagina's over FS, wie we zijn, wat we doen. Te beheren door gang - dus zonder tussenkomst van een IT dude. (mogelijkheid tot invoegen van foto's bij pagina's)
+- (C) Fotogalerij oid?
+- (C) Nieuwsberichten oid? idc.
+
+_Privé gedeelte:_
+- (M) Accounts voor dudes & OL. Contactgegevens die zelf aangepast kunnen worden en lijst weergave voor ingelogde gebruikers.
+ - (M) Gegevens per dude/OL: Naam, bijnaam, geboortedatum, lichting (FS), email, adresgegevens (straat, huisnummer, postcode, woonplaats), telefoonnummer (mobiel), profielafbeelding. Functie binnen dispuut.
+ - (M) Twee mogelijk statussen voor dude/OL: Actief (alle bovenstaande gegevens) en niet-actief (naam, bijnaam, lichting FS)
+ - (C) Weergeven van eerdere rollen bij dispuut op profielpagina
+
+- (M) Agenda waarin dudes/OL kunnen aangeven of ze er zijn. Dudes/OL kunnen activiteiten toevoegen.
+
+- (S) Forum: FS Gang (gang only), FS Algemeen, Blaat.
+ - (C) Subforums voor aparte subgroepen van FS (lichtingen, genootschappen, etc?)
+
+- (S) Slowchat ("Gatenboek") voor intern gebruik.
+
+- (S) Makkelijke manier om de FS foto's bij rainman te bekijken (simpele pagina met hyperlink + inloggegevens lijkt me? of gewoon een menuitem dat er direct naar doorverwijst)
+
+- (S) Discord link. Gewoon een hyperlink zichtbaar voor ingelogde gebruikers.
