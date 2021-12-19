@@ -44,3 +44,17 @@ hr.big {
  */
 .navbar { height: var(--nav-size) }
 .navbar .username { color: ghostwhite; }
+
+
+/********************
+ ******* PROFIEL *******
+ ********************** */
+
+
+
+/********************
+ ******* HELPERS *******
+ ********************** */
+d-inline {
+    display: inline !important;
+}

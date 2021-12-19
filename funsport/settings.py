@@ -134,7 +134,10 @@ AVATAR_MEDIA_ROOT = os.path.join(MEDIA_ROOT, 'avatars')
 MEDIA_URL = '/media/'
 
 LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'   # TODO: verander dit naar wordpress front-end.
 
 AUTH_USER_MODEL = 'profiles.User'
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

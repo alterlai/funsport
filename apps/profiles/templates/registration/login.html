@@ -1,0 +1,22 @@
+{% extends 'registration/login_template.html' %}
+
+{% block content %}
+    {% if error %}
+        <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+    {{ form.non_field_errors }}
+    <form class="form-signin" method="post">
+        <span id="reauth-email" class="reauth-email"></span>
+        <label for="username">E-mail</label>
+        <input type="text" name="username" id="inputEmail" class="form-control mb-4" placeholder="E-mail" required autofocus>
+        <label for="password">Wachtwoord</label>
+        <input type="password" id="inputPassword" class="form-control mb-4" name="password" placeholder="Wachtwoord" required>
+        {% csrf_token %}
+        <button class="btn btn-primary btn-block btn-signin" type="submit">Sign in</button>
+    </form><!-- /form -->
+    <a href="{% url 'password_reset' %}" class="forgot-password">
+        Wachtwoord vergeten?
+    </a>
+    </div><!-- /card-container -->
+{% endblock %}
+

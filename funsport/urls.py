@@ -21,8 +21,10 @@ from django.conf import settings
 
 urlpatterns = [
     path('', include('apps.public.urls')),
+    path('gallery/', include('apps.gallery.urls')),
     path('profile', include('apps.profiles.urls')),
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
     path("login/", auth_views.LoginView.as_view(redirect_authenticated_user=True), name="login"),
     path("logout/", auth_views.LogoutView.as_view(), name="logout"),
 

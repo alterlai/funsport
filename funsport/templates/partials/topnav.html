@@ -7,8 +7,9 @@
             </div>
             <ul>
                 <li><a href="{% url "public:home" %}">Home</a></li>
-                {% if user.logged_in %}
+                {% if user.is_authenticated %}
                     <li><a href="{% url 'profiles:profile' %}">Profiel</a></li>
+                    <li><a href="{% url 'gallery:index' %}"></a></li>
                 {% endif %}
 
             </ul>
