@@ -8,8 +8,9 @@
             <ul>
                 <li><a href="{% url "public:home" %}">Home</a></li>
                 {% if user.is_authenticated %}
-                    <li><a href="{% url 'profiles:profile' %}">Profiel</a></li>
-                    <li><a href="{% url 'gallery:index' %}"></a></li>
+                    <li><a href="{% url 'profiles:group_index' %}">Groepen</a></li>
+                    <li><a href="{% url 'gallery:index' %}">Gallerij</a></li>
+
                 {% endif %}
 
             </ul>
@@ -19,7 +20,7 @@
                 <li><a href="{% url 'admin:index' %}">Admin panel</a></li>
             {% endif %}
             {% if user.is_authenticated %}
-                <li><a href="#">{{ user.username }}</a></li>
+                <li><a href="{% url "profiles:profile" %}">{{ user.username }}</a></li>
                 <li><a href="{% url "logout" %}">Logout</a></li>
             {% else %}
                 <li><a href="{% url 'login' %}">Login</a></li>

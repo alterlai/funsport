@@ -31,6 +31,15 @@
 
         <div class="row mt-5">
             <div class="col-sm-12">
+                <h2>Groepen</h2>
+                {% for group in user.groups.all %}
+                    {{ group }}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-sm-12">
                 <h2>Comments</h2>
                 <i>In ontwikkeling</i>
             </div>
