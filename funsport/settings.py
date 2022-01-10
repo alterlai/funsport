@@ -36,11 +36,11 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'apps.profiles',
     'apps.public',
+    'apps.events',
     'apps.gallery',
     'funsport',
     'photologue',
     'sortedm2m',
-    'schedule',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

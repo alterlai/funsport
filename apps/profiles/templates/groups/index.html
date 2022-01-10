@@ -5,6 +5,7 @@
         {% for group in groups %}
             <div class="row card2 mb-3">
                 <h2>{{ group }}</h2>
+                <span class="grey">Aantal leden: {{ group.user_set.count }}</span>
                 <div class="d-flex">
                 {% if group.user_set.all %}
                     {% for user in group.user_set.all%}
@@ -16,9 +17,7 @@
                         </div>
                     {% endfor %}
                 {% endif %}
-
                 </div>
-
             </div>
         {% endfor %}
     </div>

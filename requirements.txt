@@ -1,16 +1,15 @@
 asgiref==3.4.1
 backports.zoneinfo==0.2.1
-Django==4.0
+Django==4.0.1
 django-admin==2.0.1
 django-excel-base==1.0.4
 django-excel-response2==3.0.2
-# django-photologue==3.14
-# django-scheduler==0.9.5
+django-photologue==3.14
 django-six==1.0.4
 django-sortedm2m==3.1.1
 ExifRead==2.3.2
 icalendar==4.0.9
-Pillow==8.4.0
+Pillow==9.0.0
 python-dateutil==2.8.2
 pytz==2021.3
 screen==1.0.1
