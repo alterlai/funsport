@@ -4,41 +4,44 @@
     <div class="container">
         <!-- Profile gedeelte -->
         <div class="row">
-            <div class="col-sm-3">
-                <div class="avatar-container">
-                    <img class="avatar" src="{{ user.avatar.url }}" alt="">
+            <div class="col-sm-8 card2 d-flex">
+                <div>
+                    <div class="avatar-container">
+                        <img class="avatar" src="{{ user.avatar.url }}" alt="">
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-9">
-                <h2 class="d-inline">{{ user.dude_name }}</h2>
-                <table class="table table-borderless">
-                    <tr>
-                        <td>Naam</td>
-                        <td>{{ user.first_name }} {{ user.last_name }}</td>
-                    </tr>
-                    <tr>
-                        <td>Rol</td>
-                        <td>{{ user.current_role }}</td>
-                    </tr>
-                    <tr>
-                        <td>Laatst online</td>
-                        <td>{{ user.last_login | date:'d-m-Y' }}</td>
-                    </tr>
-                </table>
-                <p>{{ user.description }}</p>
-            </div>
-        </div>
+                <div class="w-100">
+                    <h2>{{ user.dude_name }}</h2>
+                        <table class="table table-borderless table-sm">
+                            <tr>
+                                <td class="bold grey">Naam</td>
+                                <td>{{ user.first_name }} {{ user.last_name }}</td>
+                            </tr>
+                            <tr>
+                                <td class="bold grey">Rol</td>
+                                <td>{{ user.current_role }}</td>
+                            </tr>
+                            <tr>
+                                <td class="bold grey">Laatst online</td>
+                                <td>{{ user.last_login | date:'d-m-Y' }}</td>
+                            </tr>
+                        </table>
+                    <div class="p-2">
+                        <p><i>{{ user.description }}</i></p>
+                    </div>
 
-        <div class="row mt-5">
-            <div class="col-sm-12">
+                </div>
+
+            </div>
+            <div class="col-sm-3 offset-sm-1 card2">
                 <h2>Groepen</h2>
                 {% for group in user.groups.all %}
-                    {{ group }}
+                    {{ group }}<br>
                 {% endfor %}
             </div>
         </div>
 
-        <div class="row mt-5">
+        <div class="row mt-5 card2">
             <div class="col-sm-12">
                 <h2>Comments</h2>
                 <i>In ontwikkeling</i>

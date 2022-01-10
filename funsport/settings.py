@@ -38,12 +38,17 @@ INSTALLED_APPS = [
     'apps.public',
     'apps.gallery',
     'funsport',
+    'photologue',
+    'sortedm2m',
+    'schedule',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+
 ]
 
 MIDDLEWARE = [
@@ -65,6 +70,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.request', # Onderdeel van scheduler.
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
@@ -139,5 +145,7 @@ LOGOUT_REDIRECT_URL = '/'   # TODO: verander dit naar wordpress front-end.
 
 AUTH_USER_MODEL = 'profiles.User'
 
+# https://docs.djangoproject.com/en/dev/ref/contrib/sites/#enabling-the-sites-framework
+SITE_ID = 1 # nodig voor photologue
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

@@ -1,12 +1,26 @@
 {% extends 'partials/base.html' %}
 
 {% block content %}
+    <div class="container">
+        {% for group in groups %}
+            <div class="row card2 mb-3">
+                <h2>{{ group }}</h2>
+                <div class="d-flex">
+                {% if group.user_set.all %}
+                    {% for user in group.user_set.all%}
+                        <div class="small-user-card link" data-target="{% url 'profiles:profile' user.id %}">
+                            <div class="avatar-container" style="height: 150px; width: 150px;">
+                                <img class="avatar" src="{{ user.avatar.url }}" alt="{{ user.dude_name }}-avatar">
+                            </div>
+                            <h5>{{ user.dude_name }}</h5>
+                        </div>
+                    {% endfor %}
+                {% endif %}
 
-    {% for group in groups %}
-        <h2><a href="#">{{ group }}</a></h2>
-        {% for user in group.user_set.all %}
-            {{ user.dude_name }}
+                </div>
+
+            </div>
         {% endfor %}
-    {% endfor %}
+    </div>
 
 {% endblock %}
